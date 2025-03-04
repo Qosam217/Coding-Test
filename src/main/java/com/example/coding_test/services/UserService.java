@@ -24,9 +24,9 @@ public class UserService {
 
     public User register(User user){
         if(userRepo.existsByUsername(user.getUsername())){
-            return userRepo.save(user);
-        }else{
             return null;
+        }else{
+            return userRepo.save(user);
         }
     }
 }
